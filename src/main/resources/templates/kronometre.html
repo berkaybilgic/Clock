@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">KRONOMETROM.COM</a>
+</nav>
+<br><br><br><br>
+
+
+
+
+<h1 align="center" > Kronometre Sayacı </h1>
+
+
+
+
+<div class="container" align="center"  >
+
+    <div style="overflow: auto; width: 590px;" >
+        <script type="text/javascript">  var saniye = 0, dakika = 0, saat = 0; function baslat() { saniye = 0, dakika = 0, saat = 0; function bak() {if(saniye < 59) saniye = saniye + 1;else{saniye = 0; if(dakika < 59) dakika = dakika + 1;else{dakika = 0; saat = saat + 1;}}$("#sure").html(saat + " : " + dakika + " : " + saniye);}$(document).ready(function(){$("#sure").html("0 : 0 : 0");setInterval(bak, 1000);   document.getElementById("myBtn").disabled = true; })}
+        function  sıfırla() { saniye = 0, dakika = 0, saat = 0;}
+
+        </script>
+
+        <span id="sure" style="font-size: 24pt; font-weight: bold;">0 : 0 : 0</span>
+
+
+    </div>
+    <button type="button" class="btn btn-success" id="myBtn" onclick="baslat()" > Başlat </button>
+    <button type="button" class="btn btn-danger"  onclick="sıfırla()" > Sıfırla </button>
+
+
+</div>
+
+</body>
+</html>
